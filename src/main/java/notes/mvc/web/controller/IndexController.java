@@ -14,8 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/provider")
 public class IndexController {
+    public static volatile boolean alive = true;
+
     @RequestMapping("/index")
     public String sayHi() {
+        alive = !alive;
         return "心想事成，万事如意，家和万事兴";
     }
 }
