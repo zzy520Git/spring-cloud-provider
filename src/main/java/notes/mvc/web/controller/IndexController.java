@@ -21,4 +21,9 @@ public class IndexController {
         alive = !alive;
         return "心想事成，万事如意，家和万事兴";
     }
+
+    @RequestMapping("/feigntest")
+    public String sayHello() {
+        return "Hello baby!!!";
+    }
 }
