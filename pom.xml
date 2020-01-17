@@ -8,12 +8,19 @@
     <version>2.2.2.RELEASE</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
+  <packaging>pom</packaging>
   <groupId>com.zzy.notes</groupId>
   <artifactId>spring-cloud-provider</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>spring-cloud-provider</name>
+  <name>${project.artifactId}</name>
   <url>https://blog.csdn.net/zzy520comzzy</url>
   <description>Demo project for Spring Cloud</description>
+
+  <modules>
+    <module>spring-cloud-provider-main</module>
+    <module>spring-cloud-provider-bak</module>
+    <module>spring-cloud-provider-common</module>
+  </modules>
 
   <properties>
     <java.version>1.8</java.version>
@@ -93,7 +100,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.7.0</version>
         <configuration>
           <source>${java.version}</source>
           <target>${java.version}</target>
@@ -103,7 +109,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
-        <version>3.0.2</version>
         <configuration>
           <encoding>UTF-8</encoding>
         </configuration>
@@ -113,7 +118,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.19.1</version>
         <configuration>
           <argLine>-Dfile.encoding=UTF-8</argLine>
           <skipTests>true</skipTests>
