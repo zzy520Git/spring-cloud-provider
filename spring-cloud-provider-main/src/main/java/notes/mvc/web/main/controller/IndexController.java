@@ -19,11 +19,11 @@ public class IndexController {
     @RequestMapping("/index")
     public String sayHi() {
         alive = !alive;
-        return "心想事成，万事如意，家和万事兴";
+        return "心想事成，万事如意，家和万事兴；主服务" + alive;
     }
 
     @RequestMapping("/feigntest")
     public String sayHello() {
-        return "Hello baby!!!";
+        return "Hello 欢迎main!!!LOVE";
     }
 }
