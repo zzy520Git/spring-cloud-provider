@@ -18,7 +18,6 @@ public class IndexController {
 
     @RequestMapping("/index")
     public String sayHi() {
-        alive = !alive;
         return "心想事成，万事如意，家和万事兴-b2c";
     }
 
@@ -26,5 +25,11 @@ public class IndexController {
     @RequestMapping("/feigntest")
     public String sayHello() {
         return "feigntest-测试feign-b2c";
+    }
+
+    @RequestMapping("/alive")
+    public String switchAlive() {
+        alive = !alive;
+        return String.valueOf(alive);
     }
 }
