@@ -1,5 +1,5 @@
 server:
-  port: 8763
+  port: 8771
 
 eureka:
   instance:
@@ -10,7 +10,7 @@ eureka:
     lease-expiration-duration-in-seconds: 90
   client:
     service-url:
-      # eureka-server的地址
+      # eureka-server的地址,多个以逗号分隔
       defalutZone: http://www.zzy.com:8761/eureka/
     # 健康自检周期，默认30秒，单位秒
     initial-instance-info-replication-interval-seconds: 10

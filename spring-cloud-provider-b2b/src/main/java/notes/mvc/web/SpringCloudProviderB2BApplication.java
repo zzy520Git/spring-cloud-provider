@@ -7,10 +7,10 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @EnableEurekaClient
 //@EnableDiscoveryClient	//更通用，包含EnableEurekaClient功能
 @SpringBootApplication
-public class SpringCloudProviderApplication {
+public class SpringCloudProviderB2BApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringCloudProviderApplication.class, args);
+		SpringApplication.run(SpringCloudProviderB2BApplication.class, args);
 	}
 
 }
