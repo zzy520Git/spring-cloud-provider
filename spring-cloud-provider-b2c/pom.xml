@@ -12,4 +12,11 @@
   <url>https://blog.csdn.net/zzy520comzzy</url>
   <description>Demo project for Spring Cloud</description>
 
+  <dependencies>
+    <dependency>
+      <groupId>com.zzy.notes</groupId>
+      <artifactId>spring-cloud-provider-common</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
 </project>

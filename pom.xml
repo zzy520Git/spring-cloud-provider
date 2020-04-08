@@ -19,6 +19,7 @@
   <modules>
     <module>spring-cloud-provider-b2b</module>
     <module>spring-cloud-provider-b2c</module>
+    <module>spring-cloud-provider-common</module>
   </modules>
 
   <properties>
@@ -35,6 +36,13 @@
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+      <!--解决请求到数据是xml形式  -->
+      <exclusions>
+        <exclusion>
+          <groupId>com.fasterxml.jackson.dataformat</groupId>
+          <artifactId>jackson-dataformat-xml</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <!--健康自检： uri=/actuator    uri=/actuator/health -->
     <dependency>

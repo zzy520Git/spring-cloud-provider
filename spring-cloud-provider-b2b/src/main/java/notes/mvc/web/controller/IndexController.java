@@ -1,5 +1,8 @@
 package notes.mvc.web.controller;
 
+import notes.common.util.Result;
+import notes.domain.entity.VenderEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,6 +27,14 @@ public class IndexController {
     @RequestMapping("/feigntest")
     public String sayHello() {
         return "feigntest-测试feign-b2b";
+    }
+
+    @GetMapping("/obj")
+    public Result<VenderEntity> getObject() {
+        VenderEntity venderEntity = new VenderEntity();
+        venderEntity.setName("测试商家");
+        venderEntity.setAge(666);
+        return Result.successResult(venderEntity);
     }
 
     @RequestMapping("/alive")
